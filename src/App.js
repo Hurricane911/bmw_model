@@ -4,7 +4,7 @@ import { Environment } from "@react-three/drei";
 import { Suspense } from "react";
 
 function Model(props) {
-  const { scene } = useGLTF("/bmw.glb");
+  const { scene } = useGLTF(`${process.env.PUBLIC_URL}/bmw.glb`);
   return <primitive object={scene} {...props} />
 }
 
